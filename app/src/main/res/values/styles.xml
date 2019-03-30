@@ -28,4 +28,17 @@
 
     </style>
 
+    <style name="CheckButton" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/btn_state_change</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingRight">8dp</item>
+        <item name="android:paddingTop">50dp</item>
+        <item name="android:paddingBottom">50dp</item>
+        <item name="android:layout_margin">20dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:textColor">@android:color/black</item>
+        <!--<item name="android:width"></item>-->
+        <!--<item name="android:height">150dp</item>-->
+    </style>
+
 </resources>

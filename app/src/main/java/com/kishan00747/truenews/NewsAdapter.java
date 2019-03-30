@@ -18,15 +18,15 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.MyViewHolder> 
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
 
-        TextView tvHeadline, tvDescription, tvSource, tvTimestamp;
+        TextView tvTitle, tvDescription, tvSource, tvPublishedAt;
         ImageView imvThumbnail;
 
         public MyViewHolder(View itemView) {
             super(itemView);
-            this.tvHeadline = (TextView) itemView.findViewById(R.id.tv_headline);
+            this.tvTitle = (TextView) itemView.findViewById(R.id.tv_title);
             this.tvDescription = (TextView) itemView.findViewById(R.id.tv_description);
             this.tvSource = (TextView) itemView.findViewById(R.id.tv_source);
-            this.tvTimestamp = (TextView) itemView.findViewById(R.id.tv_timestamp);
+            this.tvPublishedAt = (TextView) itemView.findViewById(R.id.tv_published_at);
 
             this.imvThumbnail = (ImageView) itemView.findViewById(R.id.imv_thumbnail);
         }
@@ -56,20 +56,15 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.MyViewHolder> 
     @Override
     public void onBindViewHolder(final MyViewHolder holder, final int listPosition) {
 
-        TextView tvHeadline = holder.tvHeadline;
+        TextView tvTitle = holder.tvTitle;
         TextView tvDescription = holder.tvDescription;
         TextView tvSource = holder.tvSource;
-        TextView tvTimestamp = holder.tvTimestamp;
+        TextView tvPublishedAt = holder.tvPublishedAt;
         ImageView imvThumbnail = holder.imvThumbnail;
 
-        tvHeadline.setText(dataSet.get(listPosition).getHeadline());
+        tvTitle.setText(dataSet.get(listPosition).getTitle());
         tvDescription.setText(dataSet.get(listPosition).getContent());
 
-        Glide.with(this).
-                load(dataSet.get(listPosition).getUrl()).
-                centerCrop().
-                placeholder(R.drawable.loading_spinner)
-                .into(imvThumbnail);
 
 
     }

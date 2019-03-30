@@ -1,58 +1,73 @@
 package com.kishan00747.truenews.model;
 
+import com.google.gson.annotations.SerializedName;
+
+import java.util.List;
+
 public class NewsItem {
 
-    String sourceId, sourceName;
-    String headline, content, description;
-    String url, urlToImage;
-    String publishedAt, author;
+    @SerializedName("source")
+    private Source source;
+
+    @SerializedName("author")
+    private String author;
+
+    @SerializedName("title")
+    private String title;
+
+    @SerializedName("description")
+    private String description;
+
+    @SerializedName("url")
+    private String url;
+
+    @SerializedName("urlToImage")
+    private String urlToImage;
+
+    @SerializedName("publishedAt")
+    private String publishedAt;
+
+    @SerializedName("content")
+    private String content;
 
 
     public NewsItem() {
     }
 
-    public NewsItem(String sourceId, String sourceName, String headline, String content, String description, String url, String urlToImage, String publishedAt, String author) {
-        this.sourceId = sourceId;
-        this.sourceName = sourceName;
-        this.headline = headline;
-        this.content = content;
+    public NewsItem(Source source, String author, String title, String description, String url, String urlToImage, String publishedAt, String content) {
+        this.source = source;
+        this.author = author;
+        this.title = title;
         this.description = description;
         this.url = url;
         this.urlToImage = urlToImage;
         this.publishedAt = publishedAt;
+        this.content = content;
+    }
+
+
+    public Source getSource() {
+        return source;
+    }
+
+    public void setSource(Source source) {
+        this.source = source;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
         this.author = author;
     }
 
-    public String getSourceId() {
-        return sourceId;
+    public String getTitle() {
+        return title;
     }
 
-    public void setSourceId(String sourceId) {
-        this.sourceId = sourceId;
-    }
-
-    public String getSourceName() {
-        return sourceName;
-    }
-
-    public void setSourceName(String sourceName) {
-        this.sourceName = sourceName;
-    }
-
-    public String getHeadline() {
-        return headline;
-    }
-
-    public void setHeadline(String headline) {
-        this.headline = headline;
-    }
-
-    public String getContent() {
-        return content;
-    }
-
-    public void setContent(String content) {
-        this.content = content;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public String getDescription() {
@@ -87,13 +102,11 @@ public class NewsItem {
         this.publishedAt = publishedAt;
     }
 
-    public String getAuthor() {
-        return author;
+    public String getContent() {
+        return content;
     }
 
-    public void setAuthor(String author) {
-        this.author = author;
+    public void setContent(String content) {
+        this.content = content;
     }
-
-
 }
