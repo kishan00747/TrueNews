@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_feed"
+            android:icon="@mipmap/feed"
+            android:title="@string/str_feed" />
+        <item
+            android:id="@+id/nav_chatbot"
+            android:icon="@mipmap/chatbot"
+            android:title="@string/str_chatbot" />
+        <item
+            android:id="@+id/nav_preferences"
+            android:icon="@mipmap/preferences"
+            android:title="@string/str_preferences" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_feedback"
+                android:icon="@mipmap/feedback"
+                android:title="@string/str_feedback" />
+            <item
+                android:id="@+id/nav_contact_us"
+                android:icon="@mipmap/contact_us"
+                android:title="@string/str_contact_us" />
+        </menu>
+    </item>
+
+</menu>
