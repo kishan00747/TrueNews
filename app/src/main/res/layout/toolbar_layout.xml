@@ -15,14 +15,14 @@
                 android:layout_height="match_parent">
 
                 <TextView
+                    android:id="@+id/createPoll"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:textSize="24sp"
                     android:layout_marginLeft="0dp"
                     android:text="TrueNews"
-                    android:textColor="@android:color/black"
-                    android:id="@+id/createPoll"/>
+                    android:textColor="@color/colorIcons"
+                    android:textSize="24sp" />
 
                 <ImageView
                     android:layout_width="30dp"

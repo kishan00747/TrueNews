@@ -25,6 +25,7 @@ public class CategoryFragment extends Fragment {
     GridLayout gridLayoutContainer;
     ArrayList<NewsCategory> arrayList;
 
+    ArrayList<String> categoryList;
 
     @Nullable
     @Override
@@ -35,6 +36,8 @@ public class CategoryFragment extends Fragment {
         gridLayoutContainer = (GridLayout) view.findViewById(R.id.gl_container);
         gridLayoutContainer.setColumnCount(2);
 
+        categoryList = new ArrayList<>();
+
         NewsCategoryList list = new NewsCategoryList();
         arrayList = list.getCategoryArrayList();
 
@@ -43,22 +46,35 @@ public class CategoryFragment extends Fragment {
             createNewButton(i);
         }
 
+        InitialActivity initialActivity = (InitialActivity) getActivity();
+        initialActivity.setCategoryList(categoryList);
+
         return view;
     }
 
-    private void createNewButton(int i) {
+    private void createNewButton(final int i) {
 
         //ContextThemeWrapper is to add style to button
-        CheckableButton button = new CheckableButton(new ContextThemeWrapper(getContext(), R.style.CheckButton), null, 0);
+        final CheckableButton button = new CheckableButton(new ContextThemeWrapper(getContext(), R.style.CheckButton), null, 0);
 
         gridLayoutContainer.addView(button);
         String name = arrayList.get(i).getName();
         button.setText(name);
+        button.setId(i);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                CheckableButton button1 = (CheckableButton)view ;
+                String cate = button1.getText().toString();
+                if(button1.isChecked()){
+                    categoryList.add(cate);
+                }
+            }
+        });
 
         // Code to stretch the button to fill the grid layout
-    GridLayout.LayoutParams param = new GridLayout.LayoutParams(GridLayout.spec(GridLayout.UNDEFINED, 1f), GridLayout.spec(GridLayout.UNDEFINED, 1f));
+    GridLayout.LayoutParams param = new GridLayout.LayoutParams(GridLayout.spec(GridLayout.UNDEFINED, 0f), GridLayout.spec(GridLayout.UNDEFINED, 1f));
         param.setMargins(10, 10, 10, 10);
-
         button.setLayoutParams(param);
     }
 

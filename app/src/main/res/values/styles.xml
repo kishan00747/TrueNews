@@ -28,6 +28,53 @@
 
     </style>
 
+    <!-- EditText Hint Text Style-->
+    <style name="MyHintText" parent="Theme.AppCompat.Light">
+        <item name="android:textColorHint">@color/colorPrimaryLight</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/colorIcons</item>
+    </style>
+
+    <!--EditText Input field style-->
+    <style name="MyEditText" parent="Theme.AppCompat.Light">
+        <item name="android:textSize">18sp</item>
+
+        <item name="colorControlNormal">@color/colorPrimaryLight</item>
+        <item name="colorControlActivated">@color/colorIcons</item>
+    </style>
+
+    <style name="RoundedButton" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/rounded_rectangle</item>
+        <item name="android:paddingTop">50dp</item>
+        <item name="android:paddingBottom">50dp</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="SectionTitle" parent="android:Widget.TextView">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:padding">15dp</item>
+        <item name="android:fontFamily">sans-serif-smallcaps</item>
+
+    </style>
+
+    <style name="BodyText" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+
+    <style name="ButtonPressed" parent="Widget.AppCompat.Button">
+        <item name="colorControlHighlight">@color/colorPrimaryLight</item>
+    </style>
+
     <style name="CheckButton" parent="Widget.AppCompat.Button">
         <item name="android:background">@drawable/btn_state_change</item>
         <item name="android:paddingLeft">8dp</item>
@@ -37,7 +84,7 @@
         <item name="android:layout_margin">20dp</item>
         <item name="android:layout_marginLeft">10dp</item>
         <item name="android:textColor">@android:color/black</item>
-        <!--<item name="android:width"></item>-->
+        <item name="android:width">0dp</item>
         <!--<item name="android:height">150dp</item>-->
     </style>
 

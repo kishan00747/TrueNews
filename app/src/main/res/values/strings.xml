@@ -15,4 +15,14 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="str_read_more">Read More</string>
+    <string name="str_signUp">Sign Up</string>
+    <string name="str_name">Name</string>
+    <string name="str_mobile">Mobile Number</string>
+    <string name="str_email">Email ID</string>
+    <string name="str_male">Male</string>
+    <string name="str_female">Female</string>
+    <string name="str_pass">Password</string>
+    <string name="str_cancel">Cancel</string>
+    <string name="str_login">Login</string>
+    <string name="signUp_underline">Sign Up here</string>
 </resources>

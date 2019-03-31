@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "377425275720",
+    "firebase_url": "https://truenews-58712.firebaseio.com",
+    "project_id": "truenews-58712",
+    "storage_bucket": "truenews-58712.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:377425275720:android:ab2b7d356a793f23",
+        "android_client_info": {
+          "package_name": "com.kishan00747.truenews"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "377425275720-badp2cgo0ihpf3npl3sposo93q501nts.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kishan00747.truenews",
+            "certificate_hash": "1bbb28b97114ea17f59a49e1376e1ef78b473bd9"
+          }
+        },
+        {
+          "client_id": "377425275720-pvoid3pr2ifi9kscm48v6k19c1jmv42k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kishan00747.truenews",
+            "certificate_hash": "c43b66501917aaaf5364784b4ec3418ad1268c9f"
+          }
+        },
+        {
+          "client_id": "377425275720-1ou463tm6uccsritio3j7unn2vegcpm4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCuc-teD-NNZN9WKdWSbWAmjx7xXUmr7U"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "377425275720-1ou463tm6uccsritio3j7unn2vegcpm4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

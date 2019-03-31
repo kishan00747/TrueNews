@@ -6,7 +6,7 @@ import android.os.Parcelable;
 public class NewsCategory implements Parcelable {
 
     String name;
-    String[] links;
+    String link;
 
     public static final Parcelable.Creator<NewsCategory> CREATOR = new Parcelable.Creator<NewsCategory>(){
 
@@ -25,13 +25,13 @@ public class NewsCategory implements Parcelable {
     public NewsCategory(Parcel parcel)
     {
         name = parcel.readString();
-        parcel.readStringArray(links);
+        link = parcel.readString();
 
     }
 
-    public NewsCategory(String name, String[] links) {
+    public NewsCategory(String name, String link) {
         this.name = name;
-        this.links = links;
+        this.link = link;
     }
 
     public String getName() {
@@ -42,12 +42,12 @@ public class NewsCategory implements Parcelable {
         this.name = name;
     }
 
-    public String[] getLinks() {
-        return links;
+    public String getLink() {
+        return link;
     }
 
-    public void setLinks(String[] links) {
-        this.links = links;
+    public void setLinks(String links) {
+        this.link = link;
     }
 
     @Override
@@ -58,7 +58,7 @@ public class NewsCategory implements Parcelable {
     @Override
     public void writeToParcel(Parcel parcel, int i) {
         parcel.writeString(name);
-        parcel.writeStringArray(links);
+        parcel.writeString(link);
     }
 }
 

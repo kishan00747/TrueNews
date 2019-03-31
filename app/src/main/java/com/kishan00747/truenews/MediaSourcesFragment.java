@@ -24,6 +24,10 @@ public class MediaSourcesFragment extends Fragment {
     GridLayout gridLayoutContainer;
     ArrayList<NewsSource> arrayList;
 
+    int[] sourcesIsChecked;
+
+    ArrayList<String> sourceList;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -36,15 +40,22 @@ public class MediaSourcesFragment extends Fragment {
         NewsSourceList list = new NewsSourceList();
         arrayList = list.getSourceArrayList();
 
+        sourceList = new ArrayList<>();
+
+        sourcesIsChecked = new int[arrayList.size()];
+
         for (int i = 0; i < arrayList.size(); i++) {
 
             createNewButton(i);
         }
 
+        InitialActivity initialActivity = (InitialActivity) getActivity();
+        initialActivity.setSourceList(sourceList);
+
         return view;
     }
 
-    private void createNewButton(int i) {
+    private void createNewButton(final int i) {
 
         //ContextThemeWrapper is to add style to button
         CheckableButton button = new CheckableButton(new ContextThemeWrapper(getContext(), R.style.CheckButton), null, 0);
@@ -52,9 +63,20 @@ public class MediaSourcesFragment extends Fragment {
         gridLayoutContainer.addView(button);
         String name = arrayList.get(i).getName();
         button.setText(name);
+        button.setId(i);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                CheckableButton button1 = (CheckableButton)view ;
+                String source = button1.getText().toString();
+                if(button1.isChecked()){
+                    sourceList.add(source);
+                }
+            }
+        });
 
         // Code to stretch the button to fill the grid layout
-        GridLayout.LayoutParams param = new GridLayout.LayoutParams(GridLayout.spec(GridLayout.UNDEFINED, 1f), GridLayout.spec(GridLayout.UNDEFINED, 1f));
+        GridLayout.LayoutParams param = new GridLayout.LayoutParams(GridLayout.spec(GridLayout.UNDEFINED, 0f), GridLayout.spec(GridLayout.UNDEFINED, 1f));
         param.setMargins(10, 10, 10, 10);
 
         button.setLayoutParams(param);

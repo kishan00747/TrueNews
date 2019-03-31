@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:grid="http://schemas.android.com/tools"
     android:id="@+id/ll_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/colorPrimary">
 
 
     <TextView
@@ -14,8 +16,9 @@
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="10dp"
+        android:fontFamily="sans-serif-smallcaps"
         android:text="Categories"
-        android:textColor="@android:color/black"
+        android:textColor="@color/colorIcons"
         android:textSize="24sp" />
 
 
@@ -27,9 +30,14 @@
         <android.support.v7.widget.GridLayout
             android:id="@+id/gl_container"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:columnCount="2"
-            android:padding="16dp">
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:layout_gravity="center_horizontal"
+
+            grid:alignmentMode="alignBounds"
+            grid:columnCount="2"
+            grid:rowOrderPreserved="false"
+            grid:useDefaultMargins="true">
 
         </android.support.v7.widget.GridLayout>
 
